@@ -1,0 +1,353 @@
+/* ============================================================
+   Jamuin — sistem dasar
+   Putih dominan, aksen earthy secukupnya, banyak ruang kosong.
+   ============================================================ */
+
+:root {
+  /* Permukaan */
+  --paper: #ffffff;
+  --paper-warm: #faf8f4;
+  --paper-deep: #f4f1ea;
+
+  /* Teks */
+  --ink: #17130f;
+  --ink-mid: #4a423b;
+  --ink-soft: #857c72;
+
+  /* Garis & aksen */
+  --line: #e9e4da;
+  --line-soft: #f1ede5;
+  --kunyit: #c8951f;
+  --jahe: #b4653a;
+  --temulawak: #a08b23;
+  --daun: #4e6b4a;
+
+  /* Bentuk */
+  --r-xl: 34px;
+  --r-lg: 26px;
+  --r-md: 18px;
+  --r-sm: 12px;
+
+  /* Bayangan lembut & hangat, bukan abu-abu netral */
+  --shadow-sm: 0 1px 2px rgba(60, 42, 24, 0.04), 0 4px 12px rgba(60, 42, 24, 0.04);
+  --shadow-md: 0 2px 6px rgba(60, 42, 24, 0.05), 0 14px 34px rgba(60, 42, 24, 0.07);
+  --shadow-lg: 0 6px 18px rgba(60, 42, 24, 0.06), 0 34px 70px rgba(60, 42, 24, 0.1);
+
+  /* Tata letak */
+  --gutter: clamp(20px, 5vw, 64px);
+  --maxw: 1240px;
+  --section-y: clamp(76px, 11vw, 160px);
+
+  /* Tipografi */
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Beri ruang untuk navbar yang menempel saat lompat ke anchor. */
+  scroll-padding-top: 96px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--jahe);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: #f6e6c2;
+  color: var(--ink);
+}
+
+/* ---------- Tipografi ---------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 40;
+  letter-spacing: -0.022em;
+  line-height: 1.06;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.display {
+  font-size: clamp(2.6rem, 7.2vw, 5.4rem);
+}
+
+.h2 {
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+}
+
+.h3 {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.2;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.lede {
+  font-size: clamp(1.02rem, 1.35vw, 1.16rem);
+  color: var(--ink-mid);
+  line-height: 1.72;
+}
+
+.muted {
+  color: var(--ink-soft);
+}
+
+/* Kata yang naik dari balik garis — dipakai <SplitWords> */
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.06em;
+  margin-bottom: -0.06em;
+}
+
+.word-in {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* ---------- Tata letak ---------- */
+
+.shell {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+section {
+  position: relative;
+}
+
+.section-pad {
+  padding-block: var(--section-y);
+}
+
+.rule {
+  height: 1px;
+  background: var(--line-soft);
+  border: 0;
+  margin: 0;
+}
+
+/* ---------- Gambar ---------- */
+
+.pic {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--paper-deep);
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+  <picture> secara bawaan display:inline, sehingga `height: 100%` pada <img>
+  tidak punya induk ber-tinggi pasti dan object-fit tidak pernah aktif —
+  gambar jadi terpotong dari atas, bukan dari tengah. Regangkan pembungkusnya.
+*/
+.pic picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Blur-up: LQIP di belakang tetap terlihat sampai gambar asli siap. */
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.pic.is-loaded img {
+  opacity: 1;
+}
+
+/* ---------- Tombol ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.86em 1.6em;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: #2c231c;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn-ghost:hover {
+  background: var(--paper-warm);
+  border-color: #ddd5c7;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.62em 1.1em;
+  font-size: 0.84rem;
+}
+
+.btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- Pill / badge ---------- */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.5em 1em;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  background: var(--paper);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: #ddd5c7;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex: none;
+}
+
+/* ---------- Aksesibilitas ---------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 200;
+  padding: 0.7em 1.1em;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

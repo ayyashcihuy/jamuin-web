@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!--
+      Judul & meta sesungguhnya dirender dari <Seo /> (React 19 mengangkatnya
+      ke <head> otomatis). Yang di bawah ini hanya cadangan untuk crawler yang
+      membaca HTML mentah sebelum React sempat jalan.
+    -->
+    <title>Jamuin — Jamu Nusantara &amp; Kopi Rempah</title>
+    <meta
+      name="description"
+      content="Jamu Nusantara yang diracik ulang untuk hari ini — rempah pilihan, resep turun-temurun, dan varian kopi herbal. Segar diminum, ringan di badan."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Plus+Jakarta+Sans:wght@400..700&display=swap"
+    />
+
+    <!-- Gambar hero: mulai diunduh sebelum bundel JS dieksekusi. -->
+    <link
+      rel="preload"
+      as="image"
+      href="/media/kunyit-760.avif"
+      imagesrcset="/media/kunyit-520.avif 520w, /media/kunyit-760.avif 760w, /media/kunyit-1024.avif 1024w"
+      imagesizes="(max-width: 900px) 78vw, 40vw"
+      type="image/avif"
+      fetchpriority="high"
+    />
+
+    <noscript>
+      <!--
+        Animasi masuk memasang opacity:0 lewat style inline. Kalau JavaScript
+        gagal dimuat, aturan ini memastikan konten tetap terbaca.
+      -->
+      <style>
+        [data-reveal] {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

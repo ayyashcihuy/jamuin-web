@@ -1,0 +1,3 @@
+.galeri-body {
+  margin-top: clamp(28px, 4vw, 44px);
+}

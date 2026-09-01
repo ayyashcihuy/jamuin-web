@@ -1,0 +1,96 @@
+.kontak {
+  padding-top: clamp(112px, 15vw, 168px);
+}
+
+.kontak-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: start;
+  gap: clamp(32px, 5vw, 72px);
+}
+
+.kontak-lede {
+  max-width: 46ch;
+}
+
+.kontak-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.kontak-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.kontak-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  min-width: 6.5em;
+}
+
+.kontak-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.kontak-card {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kontak-card-label {
+  margin: 0;
+}
+
+.kontak-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kontak-hours li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.92rem;
+}
+
+.kontak-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kontak-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink-mid);
+  transition: color 0.2s ease;
+}
+
+.kontak-socials a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 860px) {
+  .kontak-grid {
+    grid-template-columns: 1fr;
+  }
+}

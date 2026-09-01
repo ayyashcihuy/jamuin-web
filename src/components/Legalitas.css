@@ -1,0 +1,92 @@
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+.legal-certs h2 {
+  max-width: 22ch;
+}
+
+.legal-cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legal-cert-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.legal-cert-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--paper-deep);
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+.legal-cert-label {
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.legal-cert-detail {
+  font-size: 0.86rem;
+}
+
+.legal-entity {
+  font-size: 0.86rem;
+  margin-top: 6px;
+}
+
+.legal-entity strong {
+  color: var(--ink-mid);
+}
+
+.legal-gerai-card {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(22px, 2.6vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.legal-gerai-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legal-gerai-card li {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink-mid);
+}
+
+.legal-gerai-note {
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+  }
+}

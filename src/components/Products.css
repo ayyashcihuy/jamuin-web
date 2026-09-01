@@ -1,0 +1,307 @@
+.products {
+  background: var(--paper-warm);
+}
+
+.products-head {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 46ch;
+}
+
+.products-intro {
+  max-width: 50ch;
+}
+
+/* ---------- Filter kategori ---------- */
+
+.products-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-block: clamp(28px, 4vw, 44px) clamp(24px, 3vw, 36px);
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.filter-tab {
+  position: relative;
+  border: 0;
+  background: none;
+  border-radius: 999px;
+  padding: 0.6em 1.15em;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.filter-tab:hover {
+  color: var(--ink);
+}
+
+.filter-tab.is-active {
+  color: #fff;
+}
+
+/* Latar pil yang meluncur antar tab (layoutId="filter-pill"). */
+.filter-pill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.filter-label {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Grup kategori ---------- */
+
+.products-groups {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6vw, 64px);
+}
+
+.pgroup-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: clamp(16px, 2.2vw, 22px);
+}
+
+/* ---------- Harga ---------- */
+
+.price-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price-row li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.price-tier {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+
+.card-placeholder {
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+}
+
+.card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  font-size: 0.68rem;
+  padding: 0.3em 0.7em;
+}
+
+/* ---------- Panel Khasiat (tanpa foto, daftar dua kolom) ---------- */
+
+.khasiat-note {
+  margin-top: -8px;
+  margin-bottom: 14px;
+  font-size: 0.86rem;
+}
+
+.khasiat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.khasiat-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.khasiat-name {
+  font-weight: 600;
+  font-size: 0.94rem;
+}
+
+.khasiat-blurb {
+  font-weight: 400;
+  font-size: 0.86rem;
+}
+
+.khasiat-badge {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.khasiat-price {
+  flex: none;
+  font-weight: 700;
+}
+
+@media (max-width: 620px) {
+  .khasiat-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Grid kartu ---------- */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2.2vw, 30px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.products-grid > li {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+
+.card-shot {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.card:hover .card-img {
+  transform: scale(1.045);
+}
+
+/* Garis warna varian yang tumbuh dari kiri saat kartu disentuh. */
+.card-accent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.card:hover .card-accent {
+  transform: scaleX(1);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: clamp(16px, 2vw, 22px);
+  flex: 1;
+}
+
+.card-name {
+  font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 24;
+}
+
+.card-notes {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.card-cta {
+  margin-top: auto;
+  padding-top: 14px;
+  background: transparent;
+  border: 0;
+  padding-inline: 0;
+  border-radius: 0;
+  color: var(--ink);
+  gap: 0.45em;
+}
+
+.card-cta:hover {
+  background: transparent;
+  transform: none;
+  color: var(--jahe);
+}
+
+.card-cta svg {
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.card-cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-filter {
+    /* Di layar sempit, filter jadi baris yang bisa digeser ketimbang membungkus. */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+  }
+
+  .products-filter::-webkit-scrollbar {
+    display: none;
+  }
+}

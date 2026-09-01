@@ -1,0 +1,14 @@
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+}
+
+.wordmark-img {
+  display: block;
+  height: 34px;
+  width: auto;
+}
+
+.wordmark.is-compact .wordmark-img {
+  height: 28px;
+}

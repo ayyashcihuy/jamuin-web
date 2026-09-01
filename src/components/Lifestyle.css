@@ -1,0 +1,86 @@
+.life {
+  background: var(--paper);
+}
+
+.life-head {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 46ch;
+  margin-bottom: clamp(32px, 4.5vw, 56px);
+}
+
+.life-intro {
+  max-width: 50ch;
+}
+
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 3vw, 36px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.life-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Kartu tengah diturunkan sedikit — ritme editorial, bukan barisan rata. */
+.life-card:nth-child(2) {
+  margin-top: clamp(0px, 4vw, 56px);
+}
+
+.life-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: var(--paper-deep);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Lebih tinggi dari bingkai supaya parallax tidak menyingkap tepi kosong. */
+.life-parallax {
+  position: absolute;
+  inset: -14% 0;
+  will-change: transform;
+}
+
+.life-parallax .pic {
+  height: 100%;
+}
+
+.life-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 8%;
+}
+
+.life-text h3 {
+  font-variation-settings: 'SOFT' 20, 'WONK' 1, 'opsz' 24;
+}
+
+.life-text p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 720px) {
+  .life-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .life-card:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .life-frame {
+    aspect-ratio: 1;
+  }
+}

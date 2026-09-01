@@ -1,0 +1,32 @@
+{
+  "name": "jamuin-website",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "images": "node scripts/optimize-images.mjs",
+    "og-image": "node scripts/generate-og-image.mjs",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.tsx --outDir dist-ssr",
+    "build": "npm run build:client && npm run build:ssr && node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "description": "Landing page Jamuin — jamu Nusantara & kopi rempah.",
+  "dependencies": {
+    "motion": "^13.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "sharp": "^0.35.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  },
+  "private": true,
+  "type": "module"
+}

@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output — dihasilkan `npm run build`, jangan ikut di-commit.
+dist/
+dist-ssr/
+
+# Sampah ekstraksi zip macOS.
+__MACOSX/
+.DS_Store
+Thumbs.db
+
+# Semua data terkait Claude Code / AI assistant — jangan pernah ikut ke-commit.
+.claude/
+CLAUDE.md
+.mcp.json
+
+# Env & log lokal.
+.env
+.env.local
+*.log
