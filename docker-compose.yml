@@ -1,0 +1,21 @@
+services:
+  jamuin-web:
+    build: .
+    container_name: jamuin-web
+    restart: unless-stopped
+    # Bind ke loopback saja — container TIDAK langsung publik.
+    # Satu-satunya pintu publik adalah Nginx host (gateway) yang proxy ke sini.
+    ports:
+      - "127.0.0.1:3001:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

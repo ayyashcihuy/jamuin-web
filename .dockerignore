@@ -1,0 +1,14 @@
+.git
+node_modules
+dist
+dist-ssr
+
+# Aset sumber mentah — tidak dipakai build (npm run images itu dev-only),
+# tidak perlu ikut masuk ke build context / image (hemat disk & waktu build).
+FOTO
+Reference
+prompt
+
+*.md
+.env
+.env.*
