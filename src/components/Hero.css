@@ -77,6 +77,11 @@
   position: relative;
   z-index: 1;
   width: min(100%, 460px);
+  /* Harus definit — anak-anaknya (.hero-slideshow dst.) posisinya absolute
+     dan tidak ikut menyumbang tinggi, jadi tanpa ini tinggi resolve ke 0
+     lalu overflow:hidden di bawah memotong gambar sampai tak terlihat.
+     Rasio sama dengan `ratio` yang dipakai <Picture> di HeroSlideshow. */
+  aspect-ratio: 4 / 5;
   border-radius: var(--r-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
