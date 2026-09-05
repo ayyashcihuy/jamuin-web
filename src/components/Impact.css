@@ -1,0 +1,32 @@
+.impact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.impact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.impact-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.impact-label {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.impact-body {
+  color: var(--ink-mid);
+  line-height: 1.55;
+  max-width: 52ch;
+}

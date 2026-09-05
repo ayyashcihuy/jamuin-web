@@ -46,7 +46,6 @@ export const nav = [
   { label: 'Produk', href: '/produk' },
   { label: 'Kemitraan', href: '/kemitraan' },
   { label: 'Galeri', href: '/galeri' },
-  { label: 'Pesan', href: '/pesan' },
   { label: 'Kontak', href: '/kontak' },
 ] as const
 
@@ -74,11 +73,6 @@ export const seo = {
     title: `Kemitraan — ${site.name}`,
     description:
       'Bawa Jamuin ke kotamu sendiri lewat sistem kemitraan yang teruji dan transparan.',
-  },
-  pesan: {
-    path: '/pesan',
-    title: `Pesan — ${site.name}`,
-    description: 'Pesan Jamuin lewat WhatsApp — tinggalkan nama dan nomor, kami bantu proses pesananmu.',
   },
   galeri: {
     path: '/galeri',
@@ -126,20 +120,111 @@ export const heroShowcase: MediaKey[] = [
   'kopsu',
 ]
 
-/** Dua paragraf ini datang langsung dari brief — jangan diubah maknanya. */
+/**
+ * Cerita halaman Profil (Draft Revisi 05) — tujuh section berurutan yang
+ * menggantikan copy "Tentang Jamuin" versi lama, ditambah Visi & Misi baru.
+ * Redaksi persis dari draft; jangan diubah maknanya.
+ */
 export const about = {
+  eyebrow: 'Kami ingin cerita dulu...',
+  title: 'Yang Kami Racik, Yang Kami Tuju',
   paragraphs: [
-    'Jamuin lahir dari kekayaan warisan jamu Nusantara, minuman herbal yang telah menjadi bagian tak terpisahkan dari kehidupan masyarakat Indonesia selama berabad-abad, merajut keseimbangan harmonis antara tubuh, alam, dan tradisi leluhur yang terus dijaga hingga kini.',
-    'Setiap tegukan Jamuin lahir dari racikan rempah pilihan seperti kunyit, jahe, dan temulawak, diramu dengan resep turun-temurun yang telah teruji secara alami, kini hadir pula dalam varian kopi herbal yang memadukan kenikmatan kopi dengan manfaat kesehatan rempah tradisional.',
+    'Jamuin adalah usaha berbasis wellness yang berfokus pada modernisasi dan pelestarian budaya minum jamu di Indonesia.',
+    'Kami mengolah rempah asli hasil bumi pertiwi menjadi minuman sehat yang kekinian, dengan varian rasa yang disukai generasi muda, tersedia siap minum dan siap seduh. Melalui Jamuin, nongkrong tidak lagi identik dengan minuman tidak sehat.',
   ],
-  badges: [
-    { label: 'Kunyit', tone: 'kunyit' },
-    { label: 'Jahe', tone: 'jahe' },
-    { label: 'Temulawak', tone: 'temulawak' },
-    { label: 'Kopi Herbal', tone: 'kopi' },
+  image: 'bottles' as MediaKey,
+} as const
+
+/** Section "Bukan Bubuk, Tapi Perasan dan Infuse Rempah Asli". */
+export const process = {
+  title: 'Bukan Bubuk, Tapi Perasan dan Infuse Rempah Asli',
+  paragraphs: [
+    'Jamu terlanjur dibayangkan sebagai bubuk yang entah diproses seperti apa, dan kecurigaan itu bukan tanpa alasan.',
+    'Padahal rempahnya tidak pernah salah. Yang menentukan adalah prosesnya: takaran yang pas, perlakuan yang benar, dan pengategorian yang tepat.',
+    'Kami memakai rempah TOGA (Tanaman Obat Keluarga) seperti kunyit, jahe, dan kencur, yang diolah lewat dua cara: perasan dan infuse. Bukan bubuk. Karena itu rasanya bersih dan segar, bukan pahit yang harus ditahan.',
   ],
-  /** Statistik ambisi ekspansi — dari Company Profile Jamuin, Agustus 2026. */
-  stat: { value: '150+', label: 'target cabang di seluruh Indonesia' },
+  image: 'processReal' as MediaKey,
+} as const
+
+/** Section "Berawal dari Dapur Rumah" — menggantikan Timeline/Sejarah Singkat. */
+export const origin = {
+  title: 'Berawal dari Dapur Rumah',
+  paragraphs: [
+    'Perjalanan Jamuin dimulai dari kebiasaan baik di keluarga kami yang rutin merasakan khasiat rempah-rempah Nusantara.',
+    'Namun budaya minum jamu perlahan tergerus, ditinggalkan generasi muda yang lebih familiar dengan minuman kekinian. Kami ingin mengubah persepsi bahwa jamu itu pahit atau kuno, menjadi tren gaya hidup sehat yang relevan.',
+    'Keinginan menciptakan budaya nongkrong yang lebih berkualitas bagi fisik, pikiran, dan masa depan generasi muda itulah dorongan terbesar lahirnya Jamuin.',
+  ],
+  image: 'originStory' as MediaKey,
+} as const
+
+/** Section "Yang Perlahan Kami Lihat" — dampak ke tiga pemangku kepentingan. */
+export const impact = {
+  title: 'Yang Perlahan Kami Lihat',
+  items: [
+    {
+      label: 'Bagi konsumen muda',
+      body: '‘Mengenal’ pilihan minuman yang sehat saat bersosialisasi, menjadikan konsumsi rempah alami bagian dari keseharian.',
+    },
+    {
+      label: 'Bagi petani',
+      body: 'Kemitraan jangka panjang memberikan kepastian harga dan serapan pasar yang stabil.',
+    },
+    {
+      label: `Bagi citra 'Jamu'`,
+      body: 'Dari minuman tradisional yang terkesan kuno, menjadi bagian dari produk wellness modern.',
+    },
+  ],
+  image: 'communityImpact' as MediaKey,
+} as const
+
+/** Section "Tidak Semuanya Manis" — tantangan yang dihadapi. */
+export const challenges = {
+  title: 'Tidak Semuanya Manis',
+  lede: 'Setiap perjalanan selalu punya lekuk rintangannya sendiri, dan bagi kami, menciptakan racikan yang pas baru separuh dari perjuangan.',
+  intro: 'Berikut poin-poin tantangan utama yang kami hadapi:',
+  items: [
+    {
+      title: 'Mengubah Pola Pikir Generasi Muda',
+      body: 'Mengikis stigma lama bahwa jamu identik dengan rasa pahit dan kesan kuno.',
+    },
+    {
+      title: 'Formulasi Rasa',
+      body: 'Melalui ratusan kali eksperimen demi menjaga keaslian cita rasa rempah, namun tetap ramah di lidah anak muda.',
+    },
+    {
+      title: 'Edukasi Nilai Wellness',
+      body: 'Menyampaikan pesan secara persuasif bahwa merawat tubuh dan kulit secara alami adalah bentuk investasi diri jangka panjang.',
+    },
+  ],
+  image: 'challengesReal' as MediaKey,
+} as const
+
+/** Section "Bukan Sekadar Warisan Lisan" — legitimasi keilmuan racikan. */
+export const competency = {
+  title: 'Bukan Sekadar Warisan Lisan',
+  paragraphs: [
+    'Untuk meletakkan fondasi yang kuat secara keilmuan dan keabsahan produk, kami aktif mengikuti pelatihan kompetensi di bidang kesehatan tradisional, khususnya teknik peracikan minuman dari rempah Indonesia.',
+    'Dari situ kami merumuskan standar higienitas, pemilihan bahan baku, dan formulasi resep yang kami pakai hingga kini.',
+  ],
+  note: 'Foto: sertifikat kompetensi · dokumentasi ujikom',
+  image: 'ujikom' as MediaKey,
+} as const
+
+/**
+ * Visi & Misi baru (Draft Revisi 05, "TAMBAHAN PAGE") — menggantikan
+ * profile.vision/mission versi lama.
+ */
+export const visionMission = {
+  tagline: 'Hidup Sehat Demi Dunia Akhirat',
+  lede: 'Jika pikiran dan badan kita sehat, kita bisa lebih banyak dalam berbuat kebaikan.',
+  vision: 'Melestarikan Warisan Rempah Nusantara Melalui Inovasi Gaya Hidup Sehat Modern.',
+  mission: [
+    'Meracik dan menghadirkan produk rempah Nusantara yang inovatif, segar, dan ramah di lidah anak muda.',
+    'Menormalisasi gaya nongkrong sehat anak muda agar lebih bernilai dan menyehatkan melalui konsumsi rempah alami.',
+    'Mereposisi citra jamu sebagai tren gaya hidup modern (glowing & fit) serta simbol investasi kesehatan masa kini dan jangka panjang.',
+    'Memberdayakan petani rempah lokal melalui kemitraan pasokan bahan baku yang adil dan berkelanjutan.',
+    'Menggemakan kebanggaan keanekaragaman rempah Nusantara dan membawa reputasi jamu Indonesia bersaing di panggung internasional.',
+  ],
 } as const
 
 /**
@@ -175,77 +260,6 @@ export const profile = {
     },
   ],
 
-  /** Tonggak sejarah — sebagian dipasangkan foto produk sebagai ilustrasi. */
-  timeline: [
-    {
-      year: 'Agustus 2024',
-      title: 'Langkah Pertama',
-      body: 'Jamuin mulai berjalan sebagai usaha rempah & kopi Nusantara, dari resep rumahan menjadi usaha yang melayani pelanggan tiap hari.',
-      image: 'jahe' as MediaKey,
-    },
-    {
-      year: 'Maret 2025',
-      title: 'Legalitas Resmi',
-      body: 'Nomor Induk Berusaha (NIB) resmi diterbitkan Pemerintah Republik Indonesia — Jamuin resmi berbadan usaha.',
-    },
-    {
-      year: 'Mei 2025',
-      title: 'Grand Opening Jatiwarna',
-      body: 'Gerai pertama resmi dibuka di Jatiwarna, Pondok Melati — awal dari jaringan gerai Jamuin.',
-      image: 'kunyit' as MediaKey,
-    },
-    {
-      year: '2025 – 2026',
-      title: 'Jaringan Bertambah',
-      body: 'Ekspansi berlanjut ke Puri Gading (Jatiasih) dan Bintara, sekaligus memperluas varian kopi rempah.',
-      image: 'panglima' as MediaKey,
-    },
-    {
-      year: '2026 & Seterusnya',
-      title: 'Menuju 150 Titik',
-      body: 'Memperkuat sistem operasional dan kemitraan untuk mendukung target ekspansi ke 150 titik di seluruh Indonesia.',
-      image: 'bottles' as MediaKey,
-    },
-  ],
-
-  vision:
-    'Menjadi merek jamu & kopi Nusantara modern terdepan di Indonesia yang menghadirkan gaya hidup sehat berbasis kearifan lokal, hadir di 150+ titik di seluruh Indonesia.',
-
-  mission: [
-    'Menghadirkan minuman herbal dan kopi rempah 100% bahan alami, halal, dan berkualitas tinggi bagi masyarakat luas.',
-    'Melestarikan warisan tradisi jamu Nusantara dengan sentuhan modern yang relevan bagi generasi masa kini.',
-    'Membangun kemitraan usaha yang transparan, amanah, dan saling menguntungkan bagi mitra.',
-    'Mengembangkan tim operasional dan barista yang kompeten, berintegritas, dan berorientasi pada pelayanan terbaik.',
-    'Membangun sistem operasional yang scalable agar mudah direplikasi ke gerai-gerai baru tanpa mengorbankan kualitas.',
-  ],
-
-  values: [
-    {
-      title: 'Alami & Berkualitas',
-      body: '100% bahan alami, dengan racikan yang konsisten dan terstandarisasi di setiap gerai.',
-    },
-    {
-      title: 'Kebersihan & Kedisiplinan',
-      body: 'Standar sanitasi tinggi dari dapur pusat hingga gerai, dijaga lewat checklist kebersihan harian.',
-    },
-    {
-      title: 'Kejujuran & Transparansi',
-      body: 'Keterbukaan dan integritas jadi dasar setiap kemitraan dan operasional Jamuin.',
-    },
-    {
-      title: 'Kekeluargaan',
-      body: 'Setiap anggota tim adalah bagian dari "Keluarga Jamuin" — bekerja dengan hangat dan saling mendukung.',
-    },
-    {
-      title: 'Pelayanan Sepenuh Hati',
-      body: 'Keramahan dan kecepatan layanan jadi bagian inti dari pengalaman pelanggan Jamuin.',
-    },
-    {
-      title: 'Pertumbuhan Berkelanjutan',
-      body: 'Terus berinovasi pada produk dan sistem, supaya bisnis berkembang sehat dan mudah direplikasi.',
-    },
-  ],
-
   /** Enam kategori varian — detail produk lengkap ada di halaman /produk. */
   productCategories: [
     { title: 'Varian Khasiat', body: 'Disajikan panas untuk manfaat kesehatan maksimal.' },
@@ -253,7 +267,7 @@ export const profile = {
     { title: 'Varian Kopi', body: 'Racikan kopi rempah untuk pecinta kopi.' },
     { title: 'Varian Teh', body: 'Tenang, teduh, nan damai.' },
     { title: 'Varian Fit & Glow', body: 'Self-care dari dalam, untuk kulit dan tubuh.' },
-    { title: 'Varian Creamy / Jamu Susu', body: 'Gurih & sehat, aman untuk seluruh keluarga.' },
+    { title: 'Varian Creamy', body: 'Gurih & sehat, aman untuk seluruh keluarga.' },
   ],
 
   /** Gerai yang aktif beroperasi. */
@@ -509,28 +523,6 @@ export const partner = {
   heroImage: 'bottles' as MediaKey,
 } as const
 
-/** Ajakan investasi — panel "Investasi yang Menguntungkan" di halaman Kemitraan. */
-export const invest = {
-  eyebrow: 'Kenapa Jamuin',
-  title: 'Investasi yang menguntungkan, warisan yang terus ditebar.',
-  lede:
-    'Bermitra dengan Jamuin bukan sekadar membuka satu gerai lagi. Kamu ikut menebar ulang warisan minuman asli Indonesia yang nyaris dilupakan — dikemas jadi gaya hidup sehat yang relevan hari ini, dijalankan dengan sistem bisnis yang sudah teruji dan menguntungkan.',
-  points: [
-    {
-      title: 'Potensi Untung Nyata',
-      body: 'Model bisnis F&B rempah dengan margin sehat, harga terjangkau, dan sistem operasional yang sudah diuji di beberapa cabang aktif.',
-    },
-    {
-      title: 'Warisan, Bukan Sekadar Usaha',
-      body: 'Tiap gerai Jamuin adalah cara menjaga jamu Nusantara tetap hidup — dari resep leluhur, jadi kebiasaan sehat generasi sekarang.',
-    },
-    {
-      title: 'Didukung Penuh dari Pusat',
-      body: 'Resep rahasia, SOP racikan & penyajian, hingga pendampingan operasional — supaya mitra tidak berjalan sendirian membangun gerai.',
-    },
-  ],
-} as const
-
 /** Proposal kemitraan yang bisa diunduh/dilihat — tautan resmi dari tim Jamuin. */
 export const proposals = [
   {
@@ -538,12 +530,6 @@ export const proposals = [
     description: 'Rincian investasi, proyeksi, dan skema kemitraan Jamuin secara umum.',
     href: 'https://drive.google.com/file/d/1k1LLmaGa8sqQGmri7A0M3pNw9fUzVMVC/view?usp=sharing',
     cta: 'Lihat Proposal (PDF)',
-  },
-  {
-    label: 'Proposal Khusus Jatiasih',
-    description: 'Studi kasus & proyeksi kemitraan untuk lokasi Jatiasih (Puri Gading).',
-    href: 'https://www.canva.com/design/DAHSUhDya5M/1gY3O2AluGkm0XA_ZL9Lag/edit',
-    cta: 'Lihat Proposal Jatiasih',
   },
 ] as const
 

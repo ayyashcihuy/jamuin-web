@@ -1,0 +1,63 @@
+.challenges-head {
+  max-width: 62ch;
+  margin-bottom: clamp(32px, 5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.challenges-head.has-image {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+}
+
+.challenges-shot {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.challenges-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.challenges-lede {
+  max-width: 58ch;
+}
+
+@media (max-width: 860px) {
+  .challenges-head.has-image {
+    grid-template-columns: 1fr;
+  }
+
+  .challenges-visual {
+    max-width: 380px;
+  }
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(14px, 2vw, 20px);
+}
+
+.challenges-card {
+  padding: clamp(22px, 2.6vw, 28px);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.challenges-index {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}

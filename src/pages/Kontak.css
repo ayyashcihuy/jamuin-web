@@ -58,17 +58,9 @@
   margin: 0;
 }
 
-.kontak-hours {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.kontak-hours li {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-size: 0.92rem;
+.kontak-card-note {
+  margin-top: -8px;
+  font-size: 0.86rem;
 }
 
 .kontak-socials {

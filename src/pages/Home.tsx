@@ -24,9 +24,9 @@ const explore = [
     blurb: 'Buka gerai Jamuin di kotamu dengan sistem yang sudah teruji.',
   },
   {
-    href: '/pesan',
-    label: 'Pesan',
-    blurb: 'Tinggalkan nama dan nomor, kami proses pesananmu lewat WhatsApp.',
+    href: '/galeri',
+    label: 'Galeri',
+    blurb: 'Suasana asli gerai, tim, dan pelanggan Jamuin sehari-hari.',
   },
   {
     href: '/kontak',

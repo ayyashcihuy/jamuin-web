@@ -2190,6 +2190,364 @@ export const media = {
         }
       ]
     }
+  },
+  "processReal": {
+    "alt": "Segelas Jamuin dikelilingi rempah asli — jahe, kunyit, dan kayu manis — bukan bubuk instan",
+    "width": 1536,
+    "height": 1536,
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQABAABABsJbACdAEDdqsga4AA/kjXDHbEilCn4BOhT9x0G0iwNDTWZr/O/m+3Ctmt1SCGbgG3YtEaxovNfqzyBRgzkAAA",
+    "sources": {
+      "avif": [
+        {
+          "w": 320,
+          "url": "/media/processReal-320.avif"
+        },
+        {
+          "w": 520,
+          "url": "/media/processReal-520.avif"
+        },
+        {
+          "w": 760,
+          "url": "/media/processReal-760.avif"
+        },
+        {
+          "w": 1120,
+          "url": "/media/processReal-1120.avif"
+        },
+        {
+          "w": 1536,
+          "url": "/media/processReal-1536.avif"
+        }
+      ],
+      "webp": [
+        {
+          "w": 320,
+          "url": "/media/processReal-320.webp"
+        },
+        {
+          "w": 520,
+          "url": "/media/processReal-520.webp"
+        },
+        {
+          "w": 760,
+          "url": "/media/processReal-760.webp"
+        },
+        {
+          "w": 1120,
+          "url": "/media/processReal-1120.webp"
+        },
+        {
+          "w": 1536,
+          "url": "/media/processReal-1536.webp"
+        }
+      ],
+      "jpeg": [
+        {
+          "w": 320,
+          "url": "/media/processReal-320.jpg"
+        },
+        {
+          "w": 520,
+          "url": "/media/processReal-520.jpg"
+        },
+        {
+          "w": 760,
+          "url": "/media/processReal-760.jpg"
+        },
+        {
+          "w": 1120,
+          "url": "/media/processReal-1120.jpg"
+        },
+        {
+          "w": 1536,
+          "url": "/media/processReal-1536.jpg"
+        }
+      ]
+    }
+  },
+  "communityImpact": {
+    "alt": "Dua anak muda memegang gelas Jamuin sambil bermain basket, mewakili gaya nongkrong sehat generasi muda",
+    "width": 2048,
+    "height": 2048,
+    "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAwAgCdASoQABAABABsJaACdIDZGBv+fxtwAAD+yfHzQMJgQcosNlZaris5iKulNxh1sOVoph5SWS88+Amd1KxAAAA=",
+    "sources": {
+      "avif": [
+        {
+          "w": 320,
+          "url": "/media/communityImpact-320.avif"
+        },
+        {
+          "w": 520,
+          "url": "/media/communityImpact-520.avif"
+        },
+        {
+          "w": 760,
+          "url": "/media/communityImpact-760.avif"
+        },
+        {
+          "w": 1120,
+          "url": "/media/communityImpact-1120.avif"
+        },
+        {
+          "w": 1600,
+          "url": "/media/communityImpact-1600.avif"
+        }
+      ],
+      "webp": [
+        {
+          "w": 320,
+          "url": "/media/communityImpact-320.webp"
+        },
+        {
+          "w": 520,
+          "url": "/media/communityImpact-520.webp"
+        },
+        {
+          "w": 760,
+          "url": "/media/communityImpact-760.webp"
+        },
+        {
+          "w": 1120,
+          "url": "/media/communityImpact-1120.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/media/communityImpact-1600.webp"
+        }
+      ],
+      "jpeg": [
+        {
+          "w": 320,
+          "url": "/media/communityImpact-320.jpg"
+        },
+        {
+          "w": 520,
+          "url": "/media/communityImpact-520.jpg"
+        },
+        {
+          "w": 760,
+          "url": "/media/communityImpact-760.jpg"
+        },
+        {
+          "w": 1120,
+          "url": "/media/communityImpact-1120.jpg"
+        },
+        {
+          "w": 1600,
+          "url": "/media/communityImpact-1600.jpg"
+        }
+      ]
+    }
+  },
+  "originStory": {
+    "alt": "Seseorang membaca buku sambil memegang segelas Jamuin hangat, suasana santai dan personal",
+    "width": 1536,
+    "height": 1536,
+    "lqip": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQABAABABsJQBOgBXhI4+If4AA/trHGOo4kPFYnP7mhjqnR0/WO9strqOv+jaKt6XCwljipdL1I7fNdxnF6Ef+YKnRAAAA",
+    "sources": {
+      "avif": [
+        {
+          "w": 320,
+          "url": "/media/originStory-320.avif"
+        },
+        {
+          "w": 520,
+          "url": "/media/originStory-520.avif"
+        },
+        {
+          "w": 760,
+          "url": "/media/originStory-760.avif"
+        },
+        {
+          "w": 1120,
+          "url": "/media/originStory-1120.avif"
+        },
+        {
+          "w": 1536,
+          "url": "/media/originStory-1536.avif"
+        }
+      ],
+      "webp": [
+        {
+          "w": 320,
+          "url": "/media/originStory-320.webp"
+        },
+        {
+          "w": 520,
+          "url": "/media/originStory-520.webp"
+        },
+        {
+          "w": 760,
+          "url": "/media/originStory-760.webp"
+        },
+        {
+          "w": 1120,
+          "url": "/media/originStory-1120.webp"
+        },
+        {
+          "w": 1536,
+          "url": "/media/originStory-1536.webp"
+        }
+      ],
+      "jpeg": [
+        {
+          "w": 320,
+          "url": "/media/originStory-320.jpg"
+        },
+        {
+          "w": 520,
+          "url": "/media/originStory-520.jpg"
+        },
+        {
+          "w": 760,
+          "url": "/media/originStory-760.jpg"
+        },
+        {
+          "w": 1120,
+          "url": "/media/originStory-1120.jpg"
+        },
+        {
+          "w": 1536,
+          "url": "/media/originStory-1536.jpg"
+        }
+      ]
+    }
+  },
+  "challengesReal": {
+    "alt": "Tiga gelas Jamuin dengan kaki dan tangan berjalan bersama menyeberang jalan, melambangkan tiga varian rasa",
+    "width": 1536,
+    "height": 1536,
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQABAABABsJbACdAC4PC8ph/QA/qMcGqoGZS/f5Nvskw3/LQmcX/tgqoVLnEZXRTqdM01XPZEKUlFi5Y2V+u1reIAAAA==",
+    "sources": {
+      "avif": [
+        {
+          "w": 320,
+          "url": "/media/challengesReal-320.avif"
+        },
+        {
+          "w": 520,
+          "url": "/media/challengesReal-520.avif"
+        },
+        {
+          "w": 760,
+          "url": "/media/challengesReal-760.avif"
+        },
+        {
+          "w": 1120,
+          "url": "/media/challengesReal-1120.avif"
+        },
+        {
+          "w": 1536,
+          "url": "/media/challengesReal-1536.avif"
+        }
+      ],
+      "webp": [
+        {
+          "w": 320,
+          "url": "/media/challengesReal-320.webp"
+        },
+        {
+          "w": 520,
+          "url": "/media/challengesReal-520.webp"
+        },
+        {
+          "w": 760,
+          "url": "/media/challengesReal-760.webp"
+        },
+        {
+          "w": 1120,
+          "url": "/media/challengesReal-1120.webp"
+        },
+        {
+          "w": 1536,
+          "url": "/media/challengesReal-1536.webp"
+        }
+      ],
+      "jpeg": [
+        {
+          "w": 320,
+          "url": "/media/challengesReal-320.jpg"
+        },
+        {
+          "w": 520,
+          "url": "/media/challengesReal-520.jpg"
+        },
+        {
+          "w": 760,
+          "url": "/media/challengesReal-760.jpg"
+        },
+        {
+          "w": 1120,
+          "url": "/media/challengesReal-1120.jpg"
+        },
+        {
+          "w": 1536,
+          "url": "/media/challengesReal-1536.jpg"
+        }
+      ]
+    }
+  },
+  "ujikom": {
+    "alt": "Perwakilan Jamuin menerima sertifikat Uji Kompetensi Battra Ramuan Indonesia KKNI Level IV",
+    "width": 960,
+    "height": 960,
+    "lqip": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQABAABABsJYwC7ADaPKdLgAD+k87JmwnO62T1xoHTUkdxT59+b4TRg4x7W5wRX2X947I+MAA=",
+    "sources": {
+      "avif": [
+        {
+          "w": 320,
+          "url": "/media/ujikom-320.avif"
+        },
+        {
+          "w": 520,
+          "url": "/media/ujikom-520.avif"
+        },
+        {
+          "w": 760,
+          "url": "/media/ujikom-760.avif"
+        },
+        {
+          "w": 960,
+          "url": "/media/ujikom-960.avif"
+        }
+      ],
+      "webp": [
+        {
+          "w": 320,
+          "url": "/media/ujikom-320.webp"
+        },
+        {
+          "w": 520,
+          "url": "/media/ujikom-520.webp"
+        },
+        {
+          "w": 760,
+          "url": "/media/ujikom-760.webp"
+        },
+        {
+          "w": 960,
+          "url": "/media/ujikom-960.webp"
+        }
+      ],
+      "jpeg": [
+        {
+          "w": 320,
+          "url": "/media/ujikom-320.jpg"
+        },
+        {
+          "w": 520,
+          "url": "/media/ujikom-520.jpg"
+        },
+        {
+          "w": 760,
+          "url": "/media/ujikom-760.jpg"
+        },
+        {
+          "w": 960,
+          "url": "/media/ujikom-960.jpg"
+        }
+      ]
+    }
   }
 } satisfies Record<string, MediaEntry>
 

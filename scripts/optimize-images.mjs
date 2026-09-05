@@ -68,6 +68,13 @@ const IMAGES = [
   { key: 'galPromoBanner', file: 'IMG_7510.jpg', ratio: 1, alt: 'Spanduk promo Gebyar Akhir Tahun Jamuin terpasang di depan gerai' },
   { key: 'galProductHold', file: 'IMG_8098.jpg', ratio: 1, alt: 'Pelanggan memegang dua gelas minuman Jamuin di depan gerai' },
   { key: 'galTeamBanner', file: 'IMG_9300.jpg', ratio: 1, alt: 'Anggota tim Jamuin memasang spanduk promo di depan gerai' },
+
+  // Foto cerita halaman Profil (Draft Revisi 05).
+  { key: 'processReal', file: 'proses-perasan-infuse.jpg', ratio: 1, alt: 'Segelas Jamuin dikelilingi rempah asli — jahe, kunyit, dan kayu manis — bukan bubuk instan' },
+  { key: 'communityImpact', file: 'dampak-konsumen-muda.png', ratio: 1, alt: 'Dua anak muda memegang gelas Jamuin sambil bermain basket, mewakili gaya nongkrong sehat generasi muda' },
+  { key: 'originStory', file: 'magnific_jax-generation-prompt-mar_kslFHOC16B.jpg', ratio: 1, alt: 'Seseorang membaca buku sambil memegang segelas Jamuin hangat, suasana santai dan personal' },
+  { key: 'challengesReal', file: 'magnific_jax-generation-prompt-mar_p8Ic0FHehw.jpg', ratio: 1, alt: 'Tiga gelas Jamuin dengan kaki dan tangan berjalan bersama menyeberang jalan, melambangkan tiga varian rasa' },
+  { key: 'ujikom', file: 'sertifikat-ujikom.jpg', ratio: 1, alt: 'Perwakilan Jamuin menerima sertifikat Uji Kompetensi Battra Ramuan Indonesia KKNI Level IV' },
 ]
 
 async function build() {

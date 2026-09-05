@@ -21,14 +21,11 @@ export function Kontak() {
             </RevealItem>
             <RevealItem>
               <h1 className="h2" id="kontak-title">
-                Ada pertanyaan? Kami siap bantu, setiap hari.
+                Silahkan hubungi hotline kami.
               </h1>
             </RevealItem>
             <RevealItem>
-              <p className="lede kontak-lede">
-                Hubungi kami lewat WhatsApp untuk respons paling cepat, atau lewat email dan
-                Instagram kalau kamu lebih suka itu.
-              </p>
+              <p className="lede kontak-lede">Kritik, saran, pengaduan paling cepat lewat:</p>
             </RevealItem>
 
             <RevealItem>
@@ -57,8 +54,8 @@ export function Kontak() {
                 <a className="btn btn-primary" href={waHref} target="_blank" rel="noreferrer">
                   Chat WhatsApp
                 </a>
-                <a className="btn btn-ghost" href="/pesan">
-                  Buat Pesanan
+                <a className="btn btn-ghost" href={site.linktree} target="_blank" rel="noreferrer">
+                  Semua Link Pesan
                 </a>
               </div>
             </RevealItem>
@@ -66,20 +63,10 @@ export function Kontak() {
 
           <Reveal className="kontak-panel" amount={0.15}>
             <RevealItem className="kontak-card">
-              <p className="foot-label kontak-card-label">Jam Operasional</p>
-              <ul className="kontak-hours" aria-label="Jam operasional">
-                {site.hours.map((h) => (
-                  <li key={h.days}>
-                    <span>{h.days}</span>
-                    <span className="order-dots" aria-hidden="true" />
-                    <strong>{h.time}</strong>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="rule" />
-
               <p className="foot-label kontak-card-label">Ikuti Kami</p>
+              <p className="muted kontak-card-note">
+                Jam operasional tiap gerai beda-beda — cek info terbaru di Instagram kami.
+              </p>
               <ul className="kontak-socials">
                 {socials.map((s) => (
                   <li key={s.label}>

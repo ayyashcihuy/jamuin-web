@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Picture } from '../ui/Picture'
 import { Reveal, RevealItem } from '../ui/motion'
-import { invest, partner, proposals, site } from '../data/site'
+import { partner, proposals, site } from '../data/site'
 import './Kemitraan.css'
 
 /** Ajakan bermitra — sekarang halaman /kemitraan sendiri. */
@@ -45,29 +45,6 @@ export function Kemitraan() {
       </div>
 
       <div className="shell">
-        <Reveal className="invest" amount={0.15}>
-          <RevealItem>
-            <p className="eyebrow">{invest.eyebrow}</p>
-          </RevealItem>
-          <RevealItem>
-            <h2 className="h2 invest-title">{invest.title}</h2>
-          </RevealItem>
-          <RevealItem>
-            <p className="lede invest-lede">{invest.lede}</p>
-          </RevealItem>
-
-          <RevealItem>
-            <ul className="invest-grid">
-              {invest.points.map((point) => (
-                <li key={point.title} className="invest-card">
-                  <h3 className="h3">{point.title}</h3>
-                  <p className="muted">{point.body}</p>
-                </li>
-              ))}
-            </ul>
-          </RevealItem>
-        </Reveal>
-
         <Reveal className="proposal" amount={0.15}>
           <RevealItem>
             <p className="eyebrow">Proposal Kemitraan</p>

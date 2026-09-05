@@ -5,7 +5,6 @@ import { Tentang } from './pages/Tentang'
 import { Produk } from './pages/Produk'
 import { Kemitraan } from './pages/Kemitraan'
 import { Galeri } from './pages/Galeri'
-import { Pesan } from './pages/Pesan'
 import { Kontak } from './pages/Kontak'
 import './styles/global.css'
 
@@ -18,7 +17,6 @@ export function App() {
         <Route path="produk" element={<Produk />} />
         <Route path="kemitraan" element={<Kemitraan />} />
         <Route path="galeri" element={<Galeri />} />
-        <Route path="pesan" element={<Pesan />} />
         <Route path="kontak" element={<Kontak />} />
       </Route>
     </Routes>
